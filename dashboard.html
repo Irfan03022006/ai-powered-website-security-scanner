@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Scan Dashboard{% endblock %}
+{% block content %}
+<h1 class="center">Security Scan</h1>
+<div id="progress-steps" class="progress-steps"></div>
+<div id="dashboard-results" style="display:none;"></div>
+{% endblock %}
+{% block scripts %}
+<script>window.__SCAN_ID__ = {{ scan_id }};</script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

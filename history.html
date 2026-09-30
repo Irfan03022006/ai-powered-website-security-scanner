@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Scan History{% endblock %}
+{% block content %}
+<h1>Scan History</h1>
+<div class="card">
+  <table>
+    <thead>
+      <tr><th>ID</th><th>URL</th><th>Date</th><th>Score</th><th>Status</th><th></th></tr>
+    </thead>
+    <tbody id="history-body"></tbody>
+  </table>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

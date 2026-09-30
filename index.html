@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero">
+  <h1>AI-Powered Website Security Scanner</h1>
+  <p>Run an authorized, non-destructive security assessment and get AI-explained findings with clear remediation guidance.</p>
+</div>
+
+<form id="scan-form" class="scan-form">
+  <input type="text" id="url-input" placeholder="https://your-authorized-site.example" required>
+  <button type="submit" id="scan-button">Start Security Scan</button>
+</form>
+<p class="center" id="scan-error" style="color:#f04b4b;"></p>
+
+<div class="disclaimer-box">
+  ⚠️ Only scan websites you own or have explicit written authorization to test.
+  This tool performs safe, read-only checks and is not a substitute for a professional penetration test.
+</div>
+{% endblock %}

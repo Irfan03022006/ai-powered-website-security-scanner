@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Findings{% endblock %}
+{% block content %}
+<h1>Findings</h1>
+<div class="filters">
+  <button class="active" data-filter="All">All</button>
+  <button data-filter="High">High</button>
+  <button data-filter="Medium">Medium</button>
+  <button data-filter="Low">Low</button>
+  <button data-filter="Informational">Informational</button>
+</div>
+<div id="findings-list"></div>
+<p class="center mt"><a class="btn btn-secondary" href="/dashboard/{{ scan_id }}">Back to Dashboard</a></p>
+{% endblock %}
+{% block scripts %}
+<script>window.__SCAN_ID__ = {{ scan_id }};</script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
